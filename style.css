@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  user-select: none;
+}
+.section1{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+  background:#f3f3f3;
+  opacity:1;
+  animation:animate1 5s linear;
+}
+
+@keyframes animate{
+  50%{
+    opacity:0.5;
+  }
+  100%{
+    opacity:1;
+  }
+}
+.before_text{
+  color:#444;
+  animation:animate linear 2s infinite;
+  text-transform: uppercase;
+  transition:5s;
+  z-index:10000;
+  visibility: visible;
+  opacity:1;
+}
+.before_text.hide{
+  transform:translateY(-1000px);
+  color:#fff;
+}
+#box{
+  width:300px;
+  height:300px;
+  background:#111;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition:500ms;
+  overflow: hidden;
+  flex-direction: column;
+}
+#box.visible{
+  visibility: visible;
+  opacity:1;
+  width:350px;
+  height:500px;
+  color:#fff;
+}
+#box button{
+  padding:10px 30px;
+  background: none;
+  border:2px #fff solid;
+  color:#fff;
+  transition:300ms;
+  position: relative;
+  top: 100px;
+}
+button:hover{
+  background:white;
+  color:#000;
+}
+#box input{
+  opacity:0;
+  transition: 1s;
+  padding:10px 60px;
+  /*margin-top: 100px;*/
+  margin-left: -30px;
+  transform: translateY(-180px);
+  outline:none;
+  text-align: left;
+  text-transform: uppercase;
+}
+p{
+  color:#fff;
+  font-size:20px;
+  text-transform: uppercase;
+  padding:20px 20px;
+  margin-left:-93px;
+  transform: translateY(-90px);
+  opacity: 0;
+  transition:0.5s;
+  transition:opacity 400ms;
+}
+#userDone{
+  transition:2s;
+  padding:8px 50px;
+  margin-right:191px;
+  visibility: hidden;
+  opacity:0;
+  transform:translateY(190px);
+  text-transform: uppercase;
+}
+.logo{
+  transition:200ms;
+  transform:translate(-100px, -100px);
+  letter-spacing: 1px;
+  font-size:30px;
+}
+@keyframes animate1{
+  0%{
+    filter:blur(4px);
+  }
+  50%{
+    filter:blur(8px);
+  }
+  100%{
+    filter:blur(0px);
+  }
+}

@@ -1,0 +1,144 @@
+  *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 0.5s;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+body{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  min-height:100vh;
+  overflow:hidden;
+  flex-direction: column;
+  background:#3F0071;
+}
+#box{
+  width:350px;
+  height: 500px;
+  background:#0C134F;
+  display:flex;
+  padding:20px 20px;
+  flex-direction: column;
+  transform: translateY(70px);
+  overflow:hidden;
+  transition: 500ms;
+}
+#owner{
+  color:#fff;
+  transform:translate(-8px, 220px);
+  opacity:0.7;
+}
+#box button{
+  /*padding:10px 40px;*/
+  background:none;
+  border:2px solid #D4ADFC;
+  color:#D4ADFC;
+  margin-top:30px;
+  width:120px;
+  height: 30px;
+  transition: 300ms;
+}
+#box button:hover{
+  background:#D4ADFC;
+  color:white;
+  width:160px;
+}
+#box2{
+  display:flex;
+  flex-direction:column;
+  transform:translate(-1px, -400px);
+  opacity:0;
+  visibility: hidden;
+  transition: 700ms;
+  width: 350px;
+  height: 500px;
+  justify-content: center;
+  align-items:center;
+  background:#150050;
+  overflow:hidden;
+  background-position: center;
+  background-size:cover;
+  animation:animate 4s linear;
+  -webkit-box-shadow: 20px 20px 80px -32px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 20px 20px 80px -32px rgba(0, 0, 0, 0.75);
+  box-shadow: 20px 20px 80px -32px rgba(0, 0, 0, 0.75);
+}
+@keyframes animate{
+  0%{
+    filter:(4px);
+  }
+  50%{
+    filter:blur(8px);
+  }
+  100%{
+    filter:blur(0px);
+  }
+}
+#box2 h2{
+  color: #D4ADFC;
+  transform:translateX(-45px);
+}
+
+#box2 input[type='text']{
+  width:250px;
+  padding:10px 10px;
+  height:40px;
+  outline:none;
+  text-transform: uppercase;
+  margin-top:10px;
+  transform:translateX(-10px);
+  background:none;
+  border:1px solid #D4ADFC;
+  color:#D4ADFC;
+}
+#box2 input[type='text']::placeholder{
+  color:#D4ADFC;
+  opacity:0.6;
+}
+#box2 input[type='date']{
+  width:250px;
+  height:40px;
+  outline:none;
+  text-align:center;
+  padding:13px 13px;
+  margin-top:10px;
+  transform:translateX(-10px);
+  background:none;
+  outline:none;
+  border:1px solid #D4ADFC;
+  color:#fff;
+}
+#box2 button{
+  padding:10px 10px;
+  width:100px;
+  margin-top:10px;
+  transform:translateX(-83px);
+  background: #D4ADFC;
+  color:#fff;
+  border:none;
+}
+#logo{
+  color:#D4ADFC;
+}
+#box #h2{
+  transform:translateY(20px);
+  color:#D4ADFC;
+}
+p{
+  transform:translateY(20px);
+  color:#D4ADFC;
+}
+#deathText{
+  transform:translateX(-10px);
+  font-size:40px;
+}
+#deathText.hide{
+  animation:animate 3s linear;
+  letter-spacing:3px;
+}
